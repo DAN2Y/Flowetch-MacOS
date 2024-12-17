@@ -13,8 +13,12 @@ user="${USER-$(id -u -n)}"
 # Get host
 host=$(uname -n | sed 's/\.local//')
 
-# Get OS
-os="$OSTYPE"
+# Get Darwin version
+darwin="$OSTYPE"
+
+# Get MacOS version
+os="$(sw_vers -productName)"
+os="${os} $(sw_vers -productVersion)" # Remove to hide macOS version number
 
 # Get uptime
 up="$(echo "scale=0; ($(date +%s) - $(sysctl -n kern.boottime | awk '{print $4}' | tr -d ',')) / 3600" | bc)h"
@@ -54,7 +58,7 @@ cat <<-EOF
  ${ARTR1}  ${c5}host${c0}    ${c1}•••   ${host}
  ${ARTR2}  ${c5}user${c0}    ${c2}•••   ${user}
  ${ARTR3}  ${c5}shell${c0}   ${c3}•••   ${shell}
- ${ARTR4}  ${c5}de${c0}      ${c4}•••   ${de}
+ ${ARTR4}  ${c5}os${c0}      ${c4}•••   ${os}
  ${ARTR5}  ${c5}up${c0}      ${c5}•••   ${up}
  ${ARTR6}  ${c5}pkg${c0}     ${c6}•••   ${pkg}
 
