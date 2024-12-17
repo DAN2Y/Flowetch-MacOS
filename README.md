@@ -1,12 +1,5 @@
-![image](assets/header.png)
-
-<p style="margin: -20px 0 30px">
-  <a href="https://www.buymeacoffee.com/migueravila" target="_blank" style='margin-right:0px; margin-top:5px'>
-    <img align="center" src="https://github.com/migueravila/Flowetch/blob/master/assets/donation.png" alt="donation" height="35px" />
-  </a>
-</p>
-
 ## 👇 Index
+
 - [👇 Index](#-index)
 - [⚙️ Installation](#️-installation)
 - [🎨 Customization](#-customization)
@@ -14,10 +7,10 @@
 
 ## ⚙️ Installation
 
-1. Clone this repo with `git clone https://github.com/migueravila/Flowetch.git`
-2. Run `cd Flowetch`
-3. Run `sudo make install`
-4. Now you can run it with `flowetch` 
+1. Clone this repo with `git clone https://github.com/DAN2Y/Flowetch-MacOS.git`
+2. Run `cd Flowetch-MacOS`
+3. Run `sudo cp flowetch /usr/local/bin/flowetch`
+4. Now you can run it with `flowetch`
 
 ## 🎨 Customization
 
